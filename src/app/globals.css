@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --primary:#007ACC
- ;
+  --primary:#007ACC;
   --secondary:rgb(73, 73, 73);
 ;
 }

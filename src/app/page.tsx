@@ -3,9 +3,13 @@
 import { useState } from "react";
 import Navbar from "@/Components/Navbar";
 import Sidebar from "@/Components/Sidebar";
-import DashboardContent from "@/Components/DashboardContent";
+import Dashboard from "@/Components/Dashboard";
 import Shops from "@/Components/Shops";
 import Orders from "@/Components/Orders";
+import Customers from "@/Components/Customers";
+import Requests from "@/Components/Requests";
+import Database from "@/Components/Database";
+import DeliveryPartners from "@/Components/DeliveryPartners";
 
 export default function Page() {
   const [activeTab, setActiveTab] = useState("Dashboard");
@@ -25,13 +29,13 @@ export default function Page() {
         {/* Content Area */}
         <div className="flex-1 p-6 bg-slate-50 overflow-y-auto">
 
-          {activeTab === "Dashboard" && <DashboardContent />}
+          {activeTab === "Dashboard" && <Dashboard />}
           {activeTab === "Shops" && <Shops />}
-          {activeTab === "Delivery Partners" && <div>Delivery Partners Page</div>}
+          {activeTab === "Delivery Partners" && <DeliveryPartners />}
           {activeTab === "Orders" && <Orders />}
-          {activeTab === "Customers" && <div>Customers Page</div>}
-          {activeTab === "Requests" && <div>Requests Page</div>}
-          {activeTab === "Database" && <div>Database Page</div>}
+          {activeTab === "Customers" && <Customers />}
+          {activeTab === "Requests" && <Requests />}
+          {activeTab === "Database" && <Database />}
 
         </div>
 

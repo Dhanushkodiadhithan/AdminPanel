@@ -3,15 +3,25 @@ type Props = {
   setActiveTab: (tab: string) => void;
 };
 
+import {
+  LayoutDashboard,
+  Store,
+  Truck,
+  Utensils,
+  Users,
+  MessageCircle,
+  Database,
+} from "lucide-react";
+
 export default function Sidebar({ activeTab, setActiveTab }: Props) {
   const menuItems = [
-    { icon: <i className="fa-solid fa-chart-line"></i>, label: "Dashboard" },
-    { icon: <i className="fa-solid fa-shop"></i>, label: "Shops" },
-    { icon: <i className="fa-solid fa-people-carry-box"></i>, label: "Delivery Partners" },
-    { icon: <i className="fa-solid fa-utensils"></i>, label: "Orders" },
-    { icon: <i className="fa-solid fa-user-group"></i>, label: "Customers" },
-    { icon: <i className="fa-solid fa-comments"></i>, label: "Requests" },
-    { icon: <i className="fa-solid fa-database"></i>, label: "Database" },
+    { icon: <LayoutDashboard size={20} />, label: "Dashboard" },
+    { icon: <Store size={20} />, label: "Shops" },
+    { icon: <Truck size={20} />, label: "Delivery Partners" },
+    { icon: <Utensils size={20} />, label: "Orders" },
+    { icon: <Users size={20} />, label: "Customers" },
+    { icon: <MessageCircle size={20} />, label: "Requests" },
+    { icon: <Database size={20} />, label: "Database" },
   ];
 
   return (
@@ -28,19 +38,24 @@ export default function Sidebar({ activeTab, setActiveTab }: Props) {
               key={item.label}
               onClick={() => setActiveTab(item.label)}
               className={`
-                w-full flex items-center gap-4 px-4 py-3 rounded-lg 
+                w-full flex items-center gap-4 px-4 py-3 rounded-lg  cursor-pointer
                 text-sm font-medium transition-all duration-200
                 ${isActive
                   ? "bg-white text-black shadow"
                   : "text-slate-300 hover:bg-white/10 hover:text-white"}
               `}
             >
+              {/* Icon */}
               <span
-                className={`text-lg ${isActive ? "text-black" : "text-slate-400"}`}
+                className={`
+                  flex items-center justify-center
+                  ${isActive ? "text-black" : "text-slate-400"}
+                `}
               >
                 {item.icon}
               </span>
 
+              {/* Label */}
               {item.label}
             </button>
           );

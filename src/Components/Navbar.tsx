@@ -1,3 +1,4 @@
+import { LogOut } from "lucide-react";
 export default function Navbar() {
   return (
     <header className="h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-between px-6 z-50">
@@ -24,7 +25,7 @@ export default function Navbar() {
       {/* Right */}
       <div className="flex items-center gap-4">
         <button className="flex items-center cursor-pointer gap-2 px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors border border-slate-200 dark:border-slate-700">
-          <span className="material-icons-round text-lg"><i className="fa-solid fa-right-from-bracket"></i></span>
+          <span className="material-icons-round text-lg"><LogOut /></span>
           Logout
         </button>
 
