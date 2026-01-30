@@ -24,7 +24,7 @@ export default function OrdersPage() {
               flex items-center gap-2
               bg-(--primary) text-white
               px-5 py-2.5
-              rounded-xl font-bold
+              rounded-xl font-semibold
               shadow-lg shadow-(--primary)/30
               hover:opacity-90 cursor-pointer
               active:scale-95
@@ -131,7 +131,7 @@ export default function OrdersPage() {
                 className="
                   px-3 py-1.5 rounded-lg
                   bg-(--primary) text-white
-                  font-bold cursor-pointer
+                  font-semibold cursor-pointer
                   shadow shadow-(--primary)/30
                   hover:opacity-90
                   transition

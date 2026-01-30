@@ -176,10 +176,10 @@ export default function DeliveryPartnersProfessional() {
 
       {/* Filters */}
       <div className="bg-white rounded-xl shadow-sm p-4 flex flex-wrap gap-4 justify-between">
-        <div className="flex gap-3">
+        <div className="flex gap-3 ">
           <input
             placeholder="Search partner..."
-            className="px-4 py-2 border rounded-lg w-64 text-sm focus:outline-none focus:ring-2 focus:ring-(--primary)/30"
+            className="px-4 py-2  rounded-lg w-64 text-sm focus:outline-none focus:ring-2 focus:ring-(--primary)/30"
           />
           <button className="px-4 py-2 rounded-lg hover:bg-slate-100 transition">
             <Filter size={18} className="text-slate-500" />
